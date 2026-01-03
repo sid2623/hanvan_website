@@ -1,249 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>HANVAN — Home</title>
+  <meta charset="UTF-8" />
+  <title>Hanvan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- ================= FONTS ================= -->
-<style>
-@font-face {
-    font-family: 'AmsterdamOne';
-    src: url('fonts/AmsterdamOne-eZ12l.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Horizon';
-    src: url('fonts/Horizon.woff2') format('woff2'),
-         url('fonts/Horizon.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'HorizonOutlined';
-    src: url('fonts/Horizon_Outlined.woff2') format('woff2'),
-         url('fonts/Horizon_Outlined.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'SpecialElite';
-    src: url('fonts/SpecialElite-Regular.ttf') format('truetype');
-}
-</style>
-
-<!-- ================= STYLES ================= -->
-<style>
-:root {
-    --black: #000000;
-    --white: #ffffff;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Horizon', sans-serif;
-    background: var(--white);
-    color: var(--black);
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
-    width: 100%;
-    display: block;
-}
-
-/* ================= LAYOUT ================= */
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-}
-
-section {
-    padding: 80px 0;
-    scroll-margin-top: 100px;
-}
-
-/* ================= HEADER ================= */
-header {
-    position: sticky;
-    top: 0;
-    background: rgba(255,255,255,0.95);
-    z-index: 100;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* LOGO — ONLY AMSTERDAM ONE */
-.brand-logo {
-    font-family: 'AmsterdamOne';
-    font-size: 3rem;
-    letter-spacing: 1px;
-}
-
-/* NAV */
-.nav-links {
-    display: flex;
-    gap: 32px;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
-.btn-black {
-    background: var(--black);
-    color: var(--white);
-    padding: 10px 22px;
-    border-radius: 30px;
-    font-size: 0.75rem;
-}
-
-/* ================= HERO STORY ================= */
-.hero-story {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    margin-bottom: 100px;
-}
-
-.comic-panel {
-    position: relative;
-}
-
-.comic-panel img {
-    border-radius: 6px;
-}
-
-/* TEXT OVER IMAGE */
-.comic-text {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    font-family: 'SpecialElite';
-    font-size: 0.9rem;
-    background: rgba(255,255,255,0.85);
-    padding: 12px 14px;
-    border: 1px solid var(--black);
-}
-
-.comic-text.right {
-    text-align: right;
-}
-
-/* ================= HERO INTRO ================= */
-.hero-intro {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
-    align-items: center;
-}
-
-.hero-intro h1 {
-    font-family: 'SpecialElite';
-    font-size: 3.2rem;
-    line-height: 1.2;
-    margin: 15px 0 30px;
-}
-
-.hero-intro p {
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.intro-image {
-    height: 420px;
-    overflow: hidden;
-}
-
-.intro-image img {
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 900px) {
-    .hero-story,
-    .hero-intro {
-        grid-template-columns: 1fr;
+  <!-- Amsterdam-style font placeholder -->
+  <!-- Replace src with your licensed Amsterdam One font file -->
+  <style>
+    @font-face {
+      font-family: "Amsterdam";
+      src: local("Amsterdam"), local("Amsterdam One");
     }
 
-    .hero-intro h1 {
-        font-size: 2.4rem;
+    :root {
+      --black: #000;
+      --white: #fff;
+      --cream: #f4eadc;
     }
-}
-</style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: serif;
+      background: var(--white);
+      color: var(--black);
+    }
+
+    /* ---------------- HEADER ---------------- */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 22px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s;
+      background: transparent;
+    }
+
+    .logo {
+      font-family: "Amsterdam", cursive;
+      font-size: 28px;
+      transition: color 0.3s;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 14px;
+      color: inherit;
+    }
+
+    .pill {
+      background: var(--black);
+      color: var(--white);
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 13px;
+    }
+
+    /* ---------------- SECTIONS ---------------- */
+    section {
+      padding: 140px 40px;
+    }
+
+    .hero {
+      background: var(--cream);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      max-width: 700px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+    }
+
+    .hero .cta {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: 1px solid var(--black);
+      text-decoration: none;
+      color: var(--black);
+      font-size: 14px;
+      width: fit-content;
+    }
+
+    /* second hero */
+    .hero-white {
+      background: var(--white);
+    }
+
+    /* third hero */
+    .hero-dark {
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+    }
+
+    /* ---------------- SIGNUP ---------------- */
+    .signup {
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .signup h2 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .signup p {
+      font-size: 14px;
+      opacity: 0.8;
+      margin-bottom: 24px;
+    }
+
+    .signup input {
+      padding: 14px 18px;
+      width: 320px;
+      border-radius: 999px;
+      border: none;
+      outline: none;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+    footer {
+      background: var(--black);
+      color: var(--white);
+      padding: 120px 40px 60px;
+      text-align: center;
+    }
+
+    footer .brand {
+      font-family: "Amsterdam", cursive;
+      font-size: 56px;
+      margin-bottom: 40px;
+    }
+
+    footer small {
+      opacity: 0.6;
+      font-size: 12px;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-<header>
-    <div class="container">
-        <nav>
-            <a href="#" class="brand-logo">HANVAN</a>
-            <ul class="nav-links">
-                <li><a href="#product">Product</a></li>
-                <li><a href="#story">Our Story</a></li>
-                <li><a href="#contact" class="btn-black">Contact Us</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+  <!-- HEADER -->
+  <header id="header">
+    <div class="logo" id="logo">Hanvan</div>
+    <nav>
+      <a href="#">Product</a>
+      <a href="#">Our Story</a>
+      <a href="#" class="pill">Contact Us</a>
+    </nav>
+  </header>
 
-<!-- ================= HERO ================= -->
-<section id="story">
-    <div class="container">
+  <!-- HERO 1 -->
+  <section class="hero">
+    <h1>“We didn’t want to replace a pair — just the sole.”</h1>
+    <p>“Oh my soles got broke… what if I could replace just the soles?”</p>
+    <a href="#" class="cta">Know More</a>
+  </section>
 
-        <!-- STORY PANELS -->
-        <div class="hero-story">
-            <div class="comic-panel">
-                <img src="WhatsApp Image 2026-01-03 at 17.46.33.jpeg" alt="Founder reflecting on worn footwear">
-                <div class="comic-text">
-                    “We didn’t want to replace a pair — just the sole.”
-                </div>
-            </div>
+  <!-- HERO 2 -->
+  <section class="hero hero-white">
+    <h1>Introducing a new era of<br>Interchangeable Straps & Soles</h1>
+    <p>One base. Multiple styles. Longer life.</p>
+    <a href="#" class="cta">Know More</a>
+  </section>
 
-            <div class="comic-panel">
-                <img src="slide1.2.png" alt="Worn-out slide sole">
-                <div class="comic-text right">
-                    “What if I could replace only what’s worn?”
-                </div>
-            </div>
-        </div>
+  <!-- HERO 3 -->
+  <section class="hero hero-dark">
+    <h1>It’s worth the wait.</h1>
+  </section>
 
-        <!-- INTRO -->
-        <div class="hero-intro">
-            <div>
-                <p>Introducing a new era of</p>
-                <h1>Interchangeable<br>Straps & Soles</h1>
-                <a href="#product" class="btn-black">Know More</a>
-            </div>
+  <!-- SIGNUP -->
+  <section class="signup">
+    <h2>It’s worth the wait.</h2>
+    <p>Sign up to get notified when we are ready</p>
+    <input type="email" placeholder="Email" />
+  </section>
 
-            <div class="intro-image">
-                <img src="20260102_1533_Minimalist Slide Illustration_remix_01kdz2j9wwfyhba1fk49gcgmke.png" alt="Hanvan modular slides illustration">
-            </div>
-        </div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="brand">Hanvaan Lifestyles</div>
+    <small>© 2026, Hanvaan Lifestyles Pvt. Ltd.</small>
+  </footer>
 
-    </div>
-</section>
+  <!-- COLOR SWITCH LOGIC -->
+  <script>
+    const header = document.getElementById("header");
+    const logo = document.getElementById("logo");
+    const darkSections = document.querySelectorAll(".hero-dark, .signup, footer");
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            logo.style.color = "#fff";
+            header.style.color = "#fff";
+          } else {
+            logo.style.color = "#000";
+            header.style.color = "#000";
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+
+    darkSections.forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>
-
