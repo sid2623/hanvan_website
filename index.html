@@ -4,19 +4,117 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>HANVAN — Home</title>
-<link rel="stylesheet" href="style.css" />
+<style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-black: #000000;
+            --primary-white: #ffffff;
+            --accent-orange: #F5A476; /* Matches the slide background in PDF */
+            --accent-cream: #F9F5EB;
+            --font-script: 'Dancing Script', cursive;
+            --font-body: 'Inter', sans-serif;
+            --font-typewriter: 'Courier Prime', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-white);
+            color: var(--primary-black);
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        /* --- LAYOUT UTILITIES --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center { text-align: center; }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3 {
+            font-weight: 400;
+        }
+
+        .brand-logo {
+            font-family: var(--font-script);
+            font-size: 3rem;
+            color: var(--primary-black);
+        }
+
+        .footer-logo {
+            font-family: var(--font-script);
+            font-size: 4rem;
+            color: var(--primary-white);
+        }
+
+        /* --- NAVIGATION --- */
+        header {
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            font-family: var(--font-typewriter);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-black {
+            background: var(--primary-black);
+            color: var(--primary-white);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+        }
+  <style/>
 </head>
 
 <body>
-<section class="hero hero-home">
-  <nav class="nav">
-    <div class="logo">HANVAN</div>
-    <div class="nav-links">
-      <a href="product.html">Product</a>
-      <a href="our-story.html">Our Story</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
+<header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="#" class="brand-logo">Hanvaan</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#contact" class="btn-black">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
   
   <section class="section-padding">
             <div class="container">
